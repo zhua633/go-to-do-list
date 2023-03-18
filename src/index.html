@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <h1>ToDo List</h1>
+
+    <form method="post" action="/create">
+      <label for="description">Description:</label>
+      <!-- <label for="duedate">Due Date:</label>
+      <label for="priority">Priority:</label>
+
+      <input type="text" name="description" id="description" required>
+      <input type="text" name="duedate" id="duedate" required> -->
+      <input type="text" name="priority" id="priority" required>
+      <button type="submit">Add</button>
+    </form>
+
+    {{if .}}
+    <ul>
+      {{range .}}
+      <li>
+        {{.Description}}
+
+        <form method="post" action="/update/{{.ID}}">
+          <input type="hidden" name="_method" value="PUT">
+          <input type="text" name="description" value="{{.Description}}" required>
+          <button type="submit">Update</button>
+        </form>
+
+        <form method="post" action="/delete/{{.ID}}">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+      {{end}}
+    </ul>
+    {{else}}
+    <p>No items in to-do list.</p>
+    {{end}}
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My To-Do List</title>
+  </head>
+  <body>
+    <h1>My To-Do List</h1>
+    <ul>
+    {{ range . }}
+      <li>{{ .Description }} (due: {{ .DueDate }}) [priority: {{ .Priority }}]</li>
+    {{ end }}
+    </ul>
+  </body>
+</html>
