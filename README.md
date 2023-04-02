@@ -1,5 +1,7 @@
 # go-to-do-list
 
+Under construction 🚧
+
 Do you ever feel the instant dopamine reward pleasures when you level up in a game? That was my recent experience with Animal Crossing in the past month 🤪. 
 
 After spending an ungodly amount of hours in the game, that's when I realised this time could be better dedicated to levelling up in the real life. 
