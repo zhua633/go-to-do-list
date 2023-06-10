@@ -2,10 +2,12 @@ import { useForm } from "@mantine/form";
 import { useState } from "react";
 import { Modal, Button, Group, TextInput, Textarea } from "@mantine/core";
 import { KeyedMutator } from "swr";
-import { ENDPOINT, Todo } from "../../App";
+import { Todo } from "../../App";
+import React from "react";
 
 function AddItem({ mutate }: { mutate: KeyedMutator<Todo[]> }) {
   const [open, setOpen] = useState(false);
+  const ENDPOINT = "http://localhost:4000";
 
   const form = useForm({
     initialValues: {

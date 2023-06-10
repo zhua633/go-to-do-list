@@ -2,8 +2,9 @@ import AddItem from "./components/AddItem/AddItem";
 import { Box, List, ThemeIcon } from "@mantine/core";
 import { CheckCircleFillIcon } from "@primer/octicons-react";
 import useSWR from "swr";
+import React from "react";
 
-export const ENDPOINT = "http://localhost:4000";
+const ENDPOINT = "http://localhost:4000";
 export interface Todo {
   id: number;
   title: string;
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <Box
-      sx={(theme) => ({
+      sx={() => ({
         padding: "2rem",
         width: "100%",
         maxWidth: "40rem",
