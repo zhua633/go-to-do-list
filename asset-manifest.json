@@ -1,9 +1,12 @@
 {
   "files": {
-    "main.js": "/go-to-do-list/static/js/main.31d6cfe0.js",
-    "index.html": "/go-to-do-list/index.html"
+    "main.css": "/go-to-do-list/static/css/main.31d6cfe0.css",
+    "main.js": "/go-to-do-list/static/js/main.d9d1efc0.js",
+    "index.html": "/go-to-do-list/index.html",
+    "main.d9d1efc0.js.map": "/go-to-do-list/static/js/main.d9d1efc0.js.map"
   },
   "entrypoints": [
-    "static/js/main.31d6cfe0.js"
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.d9d1efc0.js"
   ]
 }
